@@ -19,6 +19,8 @@ void Populate(struct Proc* Array)
 	for(int i  = 0; i<ArraySize;i++)
 	{
 		Array[i].BurstTime = (size_t) random();
+		//for entering data from console rewrite this to
+		//scanf("%lu", &Array[i].BurstTime);
 	}
 };
 
@@ -28,7 +30,7 @@ void OutPut(struct Proc* Array)
 	printf("Process \t TurnaroundTime \t Bursttime \t Waiting \t \n");
 	for(int i = 0;i<ArraySize;i++)
 	{
-		TurnAround_time = Array->BurstTime + Waiting_time;
+		TurnAround_time = Array[i]->BurstTime + Waiting_time;
 		printf("P[%d] \t\t %lu \t\t %lu \t\t %lu \n",i,TurnAround_time,Array->BurstTime,Waiting_time);   
 		Waiting_time = Waiting_time + Array->BurstTime;
 	}
