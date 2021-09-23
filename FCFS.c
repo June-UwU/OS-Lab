@@ -31,8 +31,8 @@ void OutPut(struct Proc* Array)
 	for(int i = 0;i<ArraySize;i++)
 	{
 		TurnAround_time = Array[i]->BurstTime + Waiting_time;
-		printf("P[%d] \t\t %lu \t\t %lu \t\t %lu \n",i,TurnAround_time,Array->BurstTime,Waiting_time);   
-		Waiting_time = Waiting_time + Array->BurstTime;
+		printf("P[%d] \t\t %lu \t\t %lu \t\t %lu \n",i,TurnAround_time,Array[i]->BurstTime,Waiting_time);   
+		Waiting_time = Waiting_time + Array[i]->BurstTime;
 	}
 	
 }
