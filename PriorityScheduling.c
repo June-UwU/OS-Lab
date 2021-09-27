@@ -28,7 +28,7 @@ void Populate(struct Proc* Array)
 	}
 }
 
-void SJF(struct Proc* Array)
+void PriorityScheduling(struct Proc* Array)
 {
 	size_t HighestPriority = 0;
 	while(RefCount > 0) //ref count maybe off by one creating a infinite loop
@@ -69,7 +69,7 @@ int main()
 {
 	struct Proc* Array = malloc((sizeof(struct Proc)* ArraySize));
 	Populate(Array);
-	SJF(Array);
+	PriorityScheduling(Array);
 	Output(Array);
 	return 0;
 }
